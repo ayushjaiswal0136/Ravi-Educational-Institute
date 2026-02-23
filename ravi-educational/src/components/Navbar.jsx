@@ -29,6 +29,7 @@ export default function Navbar() {
 
       {/* RIGHT */}
       <Link to="/get-started" className="nav-cta">
+      Get Started
       </Link>
     </motion.nav>
   );
