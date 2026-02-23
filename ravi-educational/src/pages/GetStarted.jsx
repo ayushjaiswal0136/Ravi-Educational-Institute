@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import Swal from "sweetalert2";
 import emailjs from "@emailjs/browser";
 
 export default function GetStarted() {
@@ -7,17 +8,26 @@ export default function GetStarted() {
     e.preventDefault();
 
     emailjs.sendForm(
-  "service_0436aob",
-  "template_n7hs352",
-  e.target,
-  "8LQWC-Ir8Yd6c3y_e"
-).then(
+      "service_0436aob",
+      "template_n7hs352",
+      e.target,
+      "8LQWC-Ir8Yd6c3y_e"
+    ).then(
       () => {
-        alert("Message sent successfully!");
+        Swal.fire({
+          icon: "success",
+          title: "Message Sent!",
+          text: "We will contact you soon.",
+          confirmButtonColor: "#fbbd59"
+        });
         e.target.reset();
       },
       () => {
-        alert("Failed to send message.");
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Something went wrong!",
+        });
       }
     );
   };
