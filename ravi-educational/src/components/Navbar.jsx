@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import logo from "../assets/logo.png";
 
@@ -27,9 +28,8 @@ export default function Navbar() {
       </div>
 
       {/* RIGHT */}
-      <a href="/get-started" className="nav-cta">
-        Get Started
-      </a>
+      <Link to="/get-started" className="nav-cta">
+      </Link>
     </motion.nav>
   );
 }
