@@ -27,7 +27,6 @@ export default function Navbar() {
         <a href="#contact">Contact Us</a>
       </div>
 
-      {/* RIGHT */}
       <Link to="/get-started" className="nav-cta">
       Get Started
       </Link>
